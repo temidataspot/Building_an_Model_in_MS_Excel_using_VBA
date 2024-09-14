@@ -5,7 +5,7 @@
 - [Overview](https://github.com/temidataspot/Building_an_Model_in_MS_Excel_using_VBA/blob/main/README.md#overview)
 - [Available Data](https://github.com/temidataspot/Building_an_Model_in_MS_Excel_using_VBA/blob/main/README.md#available-data)
 - [Business Case Study Questions and Answers](https://github.com/temidataspot/Building_an_Model_in_MS_Excel_using_VBA/blob/main/README.md#business-case-study-questions-and-answers)
-- Extra Resource
+- [Extra Resource](https://github.com/temidataspot/Building_an_Model_in_MS_Excel_using_VBA/blob/main/README.md#extra-resource)
  
 # Overview
 'GeoMine' is a fictitious company name. GeoMine is a mineral resource mining company.
