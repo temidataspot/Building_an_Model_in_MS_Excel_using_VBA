@@ -42,6 +42,7 @@ This analysis was carried out on the 23rd of May, 2024
     End Sub
 
 **Output**
+
 The number of sheets was reduced from 60 to 32 aiding easy referencing and analysis
 
 # 2. How do we link the different employee data in the other sheets to the master data (Sheet 0) such that any updates to either the master data is reflected in the working sheets and vice versa?
