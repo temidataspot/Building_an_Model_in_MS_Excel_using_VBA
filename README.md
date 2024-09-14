@@ -24,7 +24,7 @@ Dataset Structure: The GeoMine Datset originally contained 60 sheets in a workbo
 columns, and data types.
 
 # Business Case Study Questions and Answers
-- Solution
+- [Solution](https://github.com/temidataspot/Building_an_Model_in_MS_Excel_using_VBA/blob/main/solutions.md)
 
 # Extra Resource
 - Medium Article
