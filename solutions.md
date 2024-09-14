@@ -12,13 +12,14 @@ This analysis was carried out on the 23rd of May, 2024
 **Steps:**
   - Identify related sheets that be consolidated
   - Using VBA to automate partial consolidation
-    ```Sub ConsolidateSpecificSheets()
-    Dim ws As Worksheet
-    Dim wsMaster As Worksheet
-    Dim wsList As Variant
-    Dim rng As Range
-    Dim lastRow As Long
-    Dim i As Integer
+    ```vbnet
+    Sub ConsolidateSpecificSheets()
+      Dim ws As Worksheet
+      Dim wsMaster As Worksheet
+      Dim wsList As Variant
+      Dim rng As Range
+      Dim lastRow As Long
+      Dim i As Integer
     
     **Define the list of sheets to consolidate**
     wsList = Array("Sheet1", "Sheet2", "Sheet3") ' Modify this with your sheet names
