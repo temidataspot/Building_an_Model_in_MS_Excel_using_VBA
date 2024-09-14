@@ -21,14 +21,14 @@ This analysis was carried out on the 23rd of May, 2024
       Dim lastRow As Long
       Dim i As Integer
     
-    **Define the list of sheets to consolidate**
+    ' Define the list of sheets to consolidate
     wsList = Array("Sheet1", "Sheet2", "Sheet3") ' Modify this with your sheet names
     
-    **Add a new sheet for consolidation**
+    ' Add a new sheet for consolidation
     Set wsMaster = Sheets.Add
     wsMaster.Name = "Consolidated"
     
-    **Loop through the list of specified sheets**
+    ' Loop through the list of specified sheets
     For i = LBound(wsList) To UBound(wsList)
         Set ws = Sheets(wsList(i))
         lastRow = wsMaster.Cells(Rows.Count, 1).End(xlUp).Row + 1
