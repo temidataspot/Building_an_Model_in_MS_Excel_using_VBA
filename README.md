@@ -2,11 +2,11 @@
 ![image](https://github.com/user-attachments/assets/be8a8ed6-bb23-44ff-abbf-09a46c91f5c2)
 
 # Table of Contents
-- Overview
+- [Overview](https://github.com/temidataspot/Building_an_Model_in_MS_Excel_using_VBA/blob/main/README.md#overview)
 - Available Data
 - Business Case Study Questions and Answers
 - Extra Resource
-
+ 
 # Overview
 'GeoMine' is a fictitious company name. GeoMine is a mineral resource mining company.
 
@@ -27,9 +27,3 @@ columns, and data types.
 
 # Extra Resource
 - Medium Article
-
-
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
