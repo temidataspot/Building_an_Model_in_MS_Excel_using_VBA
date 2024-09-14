@@ -165,5 +165,11 @@ Below is the VBA code for the input sheet newly created
     MsgBox "Data submitted successfully!", vbInformation
   End Sub
 
+```
+# 4. Capturing the input date and details of new recruits 
 
+**Step:**
 
+# 5. How to get the date and details of terminated employees?
+
+**Step:**
