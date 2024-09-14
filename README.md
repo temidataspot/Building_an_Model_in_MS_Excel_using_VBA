@@ -19,6 +19,7 @@ and new recruits, automate tools and gain insight into the raw dataset provided.
 
 # Available Data
 Dataset: GeoMine Data
+
 Dataset Structure: The GeoMine Datset originally contained 60 sheets in a workbook with varying number of rows,
 columns, and data types.
 
