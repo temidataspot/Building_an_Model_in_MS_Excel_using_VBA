@@ -4,7 +4,7 @@
 # Table of Contents
 - [Overview](https://github.com/temidataspot/Building_an_Model_in_MS_Excel_using_VBA/blob/main/README.md#overview)
 - [Available Data](https://github.com/temidataspot/Building_an_Model_in_MS_Excel_using_VBA/blob/main/README.md#available-data)
-- Business Case Study Questions and Answers
+- [Business Case Study Questions and Answers](https://github.com/temidataspot/Building_an_Model_in_MS_Excel_using_VBA/blob/main/README.md#business-case-study-questions-and-answers)
 - Extra Resource
  
 # Overview
