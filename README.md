@@ -27,4 +27,4 @@ columns, and data types.
 - [Solution](https://github.com/temidataspot/Building_an_Model_in_MS_Excel_using_VBA/blob/main/solutions.md)
 
 # Extra Resource
-- Medium Article
+- [Medium Article](https://medium.com/@temiloluwa.jokotola/geomine-dataset-building-automation-with-vba-7624ec1dcffa)
