@@ -166,10 +166,77 @@ Below is the VBA code for the input sheet newly created
   End Sub
 
 ```
-# 4. Capturing the input date and details of new recruits 
+# 4. How to get the date and details of terminated employees?
 
-**Step:**
+**Steps:**
+- Create a new table named 'Termination Table'
+- Create columns and name them
+- Install a submit button and assign a VBA code to it
+- The VBA code for the submit button is linked to the master data which automatically populate in other worksheets
 
-# 5. How to get the date and details of terminated employees?
+```vbnet
+Attribute VB_Name = "Termination"
+Sub TerminateEmployees()
+    Dim wsInput As Worksheet
+    Dim wsEmployee As Worksheet
+    Dim terminationTable As ListObject
+    Dim masterDataTable As ListObject
+    Dim terminationRow As ListRow
+    Dim masterDataRange As Range
+    Dim employeeCode As String
+    Dim terminationReason As String
+    Dim foundCell As Range
+    Dim currentDate As String
+    Dim columnsToCopy As Variant
+    Dim columnsToPaste As Variant
+    Dim i As Integer
 
-**Step:**
+    ' Turn off screen updating and automatic calculation
+    Application.ScreenUpdating = False
+    Application.Calculation = xlCalculationManual
+    
+    ' Set references to the worksheets
+    Set wsInput = ThisWorkbook.Worksheets("InputSheet")
+    Set wsEmployee = ThisWorkbook.Worksheets("EmployeeFile")
+    
+    ' Set references to the tables
+    Set terminationTable = wsInput.ListObjects("TerminationTable")
+    Set masterDataTable = wsEmployee.ListObjects("MasterData")
+    
+    ' Define the columns to copy from MasterData
+    columnsToCopy = Array(2, 3, 4, 6, 7, 8, 10, 25) ' Employee Name, Last Name, Second Name, Job Title, Core or Non Core, Gender Description, Racial Group Description, Employee Contract Status
+    columnsToPaste = Array(3, 4, 5, 6, 7, 8, 9, 10) ' Corresponding columns in TerminationTable
+    
+    ' Get the current date
+    currentDate = Format(Date, "MM/DD/YYYY")
+    
+    ' Loop through each row in the TerminationTable
+    For Each terminationRow In terminationTable.ListRows
+        employeeCode = terminationRow.Range.Cells(1, 1).Value ' Employee Code is in column P (1st column of TerminationTable)
+        terminationReason = terminationRow.Range.Cells(1, 11).Value ' Termination Reason is in column Z (11th column of TerminationTable)
+        
+        ' Find the employee in the MasterData table
+        Set foundCell = masterDataTable.DataBodyRange.Columns(1).Find(What:=employeeCode, LookIn:=xlValues, LookAt:=xlWhole)
+        
+        If Not foundCell Is Nothing Then
+            ' Copy specified columns to the TerminationTable
+            For i = LBound(columnsToCopy) To UBound(columnsToCopy)
+                terminationRow.Range.Cells(1, columnsToPaste(i)).Value = _
+                    masterDataTable.DataBodyRange.Cells(foundCell.Row - masterDataTable.DataBodyRange.Row + 1, columnsToCopy(i)).Value
+            Next i
+            
+            ' Copy the termination reason
+            terminationRow.Range.Cells(1, 11).Value = terminationReason ' Assuming termination reason is in the 11th column of TerminationTable
+            
+            ' Copy the current date
+            terminationRow.Range.Cells(1, 2).Value = currentDate ' Assuming termination date is in the 2nd column of TerminationTable
+            
+            ' Delete the employee's row from MasterData
+            masterDataTable.DataBodyRange.Rows(foundCell.Row - masterDataTable.DataBodyRange.Row + 1).Delete
+        End If
+    Next terminationRow
+    
+    ' Turn on screen updating and automatic calculation
+    Application.ScreenUpdating = True
+    Application.Calculation = xlCalculationAutomatic
+End Sub
