@@ -67,3 +67,11 @@ The number of sheets was reduced from 60 to 32 aiding easy referencing and analy
 # 3. How can we create an input sheet that captures the information of new recruits and adds them to the master data? This new data also automatically populates the rest of the working sheet.
 
 **Steps:**
+- Create a new sheet named 'Input Sheet'
+- Build tables to capture personal information, education, residence, and employment
+- Install a submit button and assign a VBA code to it
+- The VBA code for the submit button is linked to the master data which automatically populate in other worksheets
+
+Below is the VBA code for the input sheet newly created
+   ```vbnet
+    
